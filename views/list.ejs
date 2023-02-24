@@ -7,7 +7,9 @@
      <ul>
         <li>Buy the food</li>
         <li> read the books</li>
-        
+       <% for (let i = 0; i<newItems.length; i++){ %>
+        <li> <%= newItems[i] %> </li>
+      <% } %>
      </ul>
      <form action="/" method="post">
         <input name="list_item" type="text" placeholder="item">
