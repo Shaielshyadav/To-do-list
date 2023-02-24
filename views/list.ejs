@@ -1,9 +1,4 @@
-<html>
-    <head>
-        <title>To Do list</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
+<%- include ("header.ejs") %>
         <div class="box" id="heading">
             <h1><%=  kindOfDay  %></h1> 
         </div>
@@ -15,10 +10,8 @@
                 </div>
            <% } %> 
              <form class ="item" action="/" method="post">
-                <input name="list_item" type="text" placeholder="New Item">
-                <button >+</button>
+                <input name="list_item" type="text" placeholder="New Item" autocomplete="off">
+                <button  name="list" value= "<%=kindOfDay%>" >+</button>
              </form>
         </div>
-      
-    </body>
-</html>
+<%- include("footer"); %>
